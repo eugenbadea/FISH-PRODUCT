@@ -1,0 +1,67 @@
+OSFP-1 Create database design
+OSFP-2 Create system architecture design
+
+OSFP-3 Create spring boot template project with all the dependencies
+OSFP-4 Configure database connection and database schema
+OSFP-5 Create hibernate model
+OSFP-6 Create dummy index page
+OSFP-7 Configure security
+OSFP-8 Add log in page
+OSFP-9 Add client register page(public)
+OSFP-10  Add admin register page(private, only admin role)
+
+
+OSFP-11 IMPLEMENT ADD A PRODUCTS
+
+If
+
+
+OSFP-12 IMPLEMENT VIEW ALL PRODUCTS
+
+
+
+OSFP-13 IMPLEMENT DELETE PRODUCTS
+
+
+
+OSFP-14 IMPLEMENT EDIT PRODUCTS
+
+
+
+
+OSFP-15 IMPLEMENT PRODUCT BY ID
+
+
+
+OSFP-16 IMPLEMENT ADD TO CART
+
+
+
+
+OSFP-17 IMPLEMENT VIEW CART
+
+
+
+OSFP-18 IMPLEMENT SEND ORDER
+
+
+
+
+////////////////MVP/////////////////////////////////////MVP////////////////////////////////////////MVP
+
+
+
+OSFP-19 IMPLEMENT EDIT CART CONTENT
+
+OSFP-20
+IMPLEMENT EDIT USER PROFILE
+
+As a user I should be able to create an account,with the following details
+
+
+
+
+
+
+
+

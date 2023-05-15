@@ -1,0 +1,12 @@
+FISH-PRODUCT  management system:
+Java Desktop Application used for managing an online shop "FISH PRODUCTS"
+
+One window for CRUD operation on admin(first name,last name,id)
+   allows the viewing of all on admin;adding a new admin;deleting an existing admin and updating an existing admin.
+One window for CRUD client (first name ,last name,address,email,telephone)
+  allows the viewing all clients;adding a new clients;deleting an existing client and updating an existing client.
+One window for CRUD operation on orders(product,category,quantity,country of origin)
+  allows the viewing of all the product;adding a new product,deleting an existing product and updating an existing product.
+
+
+
