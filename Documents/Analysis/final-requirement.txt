@@ -1,0 +1,132 @@
+
+
+
+      Fish product management system:
+    Java Desktop Application used for managing an ONLINE SHOP "FISH PRODUCTS"
+
+    One window for CRUD operations on Admin (firstName,lastName,id,):
+        allows the viewing of all the admin; adding a new admin; deleting an existing admin and updating an existing admin.
+    One window for CRUD client (firstName,lastName,address,email,telephone):
+        allows the viewing of all clients; adding a new client ; deleting an existing client and updating an existing client.
+    One window for CRUD operation on orders (products,category,quantity,contry of origin):
+        allows the viewing of all the product; adding a new product,deleting an existing product and updating an existing product
+
+
+    -Implementing ADMIN creation
+
+    As a user I should be able to add a new admin with following details: fiest name,last name,address,email.
+    If the creation proccess is successful the system will alocate a unique id to the new admin.
+    The system will validate the following data:
+         -first name to be not blank and not empty
+         -last  name to be not blank and not empty
+         -address to be not blank and not empty
+         -email to be not blank and not empty
+
+    -IMPLEMENT VIEW BY ID
+
+    As a user I should be able to view all detail of an existing admin by id.
+    If the given id is found in the system,the following details will be shown on the screen:
+         -first name,last name,address,email
+    If the given id is not found in the system an appropiate error message will be shown on the screen
+
+
+    -IMPLEMENT UPDATE ADMIN
+
+    As a user I should be able to update the details of existing admin.
+    If the admin is found in the system Ishould be able to update the following data:
+
+           -address to be not blank and not empty
+           -email  to be not blank and not empty
+
+    -IMPLEMENT DELETE ADMIN
+
+    As a userI should be able to delete admin by id from the system.
+    If the given id is found in the system the admin will be delete and message will be shown on the screen
+    If the given id not found in the system an appropiate error message will be shown on the screen
+
+    -----------------------------------------------------------------------------------------------------------
+
+    -IMPLEMENT PRODUCT CREATION
+
+
+
+     As a user I should be able to add a new product  with the following details: id,category,type, name,country of origin, .
+     If the creation process is successful the system will allocate a unique id to the new pet.
+        The system will validate the following data:
+                - category to be not blank and not empty
+                - type to be not blank and not empty,
+                - name to be not blank and not empty
+                - origin to be not blank and not empty
+                -quantity to be not blank and not empty
+    If the creation process fails the system will show an appropriate error message.
+
+    - IMPLEMENT VIEW ALL PRODUCT
+    As a user I should be able to view all the existing product from the system.
+            I should be able to view a list where each line will contain: id, name,type,category.
+
+    - IMPLEMENT VIEW PRODUCT BY ID
+    As a user I should be able to view all the details of an existing product by id. If the given id is found in the system, the following details
+    will be shown on the screen: id, type,category ,name,country of origin. If the given id is not found in the system an appropriate error message
+    will be shown on the screen.
+
+    - IMPLEMENT UPDATE PRODUCT
+    As a user I should be able to update the details of an existing product.
+    If the product is found by id in the system, I should be able to update the following data:
+                - country of origin
+
+    The system will validate the following data:
+                - country of origin to be not blank and not empty
+
+        If the update process fails the system will show an appropriate error message.
+    If the product is not found by id in the system an appropriate error message will be shown.
+
+    - IMPLEMENT DELETE PRODUCT
+    As a user I should be able to delete and existing product by id from the system.
+    If the given id is found in the system the product will be deleted and a message
+    will be shown on the screen.
+    If the given id is not found in the system an appropriate error message will be shown on the screen.
+
+
+    --------------------------------------------------------------------------------------------------------
+
+    - IMPLEMENT CLIENT CREATION
+        As a user I should be able to add a new client with the following details: firstname, lastname, address, email,telephone. If the creation process is successful
+    the system will allocate a unique id to the new vet.
+        The system will validate the following data:
+                - fist name to be not blank and not empty
+                - last name to be not blank and not empty
+                - address to be not blank and not empty
+                - email to be not blank and not empty
+                -telephone to be not blank and not empty
+    If the creation process fails the system will show an appropriate error message.
+
+    - IMPLEMENT VIEW ALL CLIENT
+    As a user I should be able to view all the existing vets from the system.
+            I should be able to view a list where each line will contain: id, firstname, lastname.
+
+    - IMPLEMENT VIEW CLIENT BY ID
+    As a user I should be able to view all the details of an existing vet by id. If the given id is found in the system, the following details
+    will be shown on the screen: id, firstname, lastname, address,email,telephone. If the given id is not found in the system an appropriate error message
+    will be shown on the screen.
+
+    - IMPLEMENT UPDATE CLIENT
+    As a user I should be able to update the details of an existing vet.
+    If the vet is found by id in the system, I should be able to update the following data:
+
+                - address
+                - email
+               -telephone
+    The system will validate the following data:
+
+                - address to be not blank and not empty
+                - email to be not blank and not empty
+                -telephone to be not blank and not empty
+        If the update process fails the system will show an appropriate error message.
+    If the vet is not found by id in the system an appropriate error message will be shown.
+
+    - IMPLEMENT DELETE CLIENT
+    As a user I should be able to delete and existing client by id from the system.
+    If the given id is found in the system the vet will be deleted and a message
+    will be shown on the screen.
+    If the given id is not found in the system an appropriate error message will be shown on the screen.
+

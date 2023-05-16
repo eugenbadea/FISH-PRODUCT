@@ -13,11 +13,26 @@ OSFP-10  Add admin register page(private, only admin role)
 
 OSFP-11 IMPLEMENT ADD A PRODUCTS
 
-If
+As a user I should be able to add a new product  with the following details: id,category,type, name,country of origin, .
+     If the creation process is successful the system will allocate a unique id to the new pet.
+        The system will validate the following data:
+                - category to be not blank and not empty
+                - type to be not blank and not empty,
+                - name to be not blank and not empty
+                - origin to be not blank and not empty
+                -quantity to be not blank and not empty
+                -price to be not blank and not empty
+    If the creation process fails the system will show an appropriate error message.
 
 
 OSFP-12 IMPLEMENT VIEW ALL PRODUCTS
-
+As a user I should be able to view all the existing product from the system.
+            I should be able to view a list where each line will contain: -id
+            -name
+            -origin
+            -price
+            -type
+            -category.
 
 
 OSFP-13 IMPLEMENT DELETE PRODUCTS
