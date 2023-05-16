@@ -1,4 +1,4 @@
-package org.sda.com.pizzashop;
+package org.sda.com.fishproduct;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,4 +1,4 @@
-package org.sda.com.pizzashop.model.enums;
+package org.sda.com.fishproduct.model.enums;
 
 public enum OrderStatus {
     CREATED,

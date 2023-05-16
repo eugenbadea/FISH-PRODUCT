@@ -1,4 +1,4 @@
-package org.sda.com.pizzashop.model;
+package org.sda.com.fishproduct.model;
 
 import jakarta.persistence.*;
 

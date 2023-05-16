@@ -1,9 +1,10 @@
-package org.sda.com.pizzashop.model;
+package org.sda.com.fishproduct.model;
 
-import org.sda.com.pizzashop.model.enums.OrderStatus;
-import org.sda.com.pizzashop.model.enums.PaymentMethod;
+import org.sda.com.fishproduct.model.enums.OrderStatus;
+import org.sda.com.fishproduct.model.enums.PaymentMethod;
 
 import jakarta.persistence.*;
+
 import java.util.Date;
 import java.util.List;
 
@@ -28,6 +29,7 @@ public class Order {
     private PaymentMethod paymentMethod;
     @OneToMany(mappedBy = "order")
     private List<ProductOrder> productOrder;
+
     public Order() {
     }
 

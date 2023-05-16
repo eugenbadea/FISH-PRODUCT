@@ -1,6 +1,6 @@
-package org.sda.com.pizzashop.model;
+package org.sda.com.fishproduct.model;
 
-import org.sda.com.pizzashop.model.enums.UserRole;
+import org.sda.com.fishproduct.model.enums.UserRole;
 
 import jakarta.persistence.*;
 
