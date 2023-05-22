@@ -27,8 +27,11 @@ public class Order {
     @Column(name = "payment_method")
     @Enumerated(EnumType.STRING)
     private PaymentMethod paymentMethod;
+    @ManyToOne
+    @JoinColumn(name = "user_profile_id")
+    private UserProfile userProfile;
     @OneToMany(mappedBy = "order")
-    private List<ProductOrder> productOrder;
+    private List<ProductOrder> productOrders;
 
     public Order() {
     }
@@ -87,6 +90,22 @@ public class Order {
 
     public void setPaymentMethod(PaymentMethod paymentMethod) {
         this.paymentMethod = paymentMethod;
+    }
+
+    public UserProfile getUserProfile() {
+        return userProfile;
+    }
+
+    public void setUserProfile(UserProfile userProfile) {
+        this.userProfile = userProfile;
+    }
+
+    public List<ProductOrder> getProductOrders() {
+        return productOrders;
+    }
+
+    public void setProductOrders(List<ProductOrder> productOrders) {
+        this.productOrders = productOrders;
     }
 
     @Override

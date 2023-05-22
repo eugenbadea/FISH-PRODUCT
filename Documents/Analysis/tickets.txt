@@ -1,14 +1,14 @@
-OSFP-1 Create database design
-OSFP-2 Create system architecture design
+DONE OSFP-1 Create database design
+     OSFP-2 Create system architecture design
 
-OSFP-3 Create spring boot template project with all the dependencies
-OSFP-4 Configure database connection and database schema
-OSFP-5 Create hibernate model
-OSFP-6 Create dummy index page
-OSFP-7 Configure security
-OSFP-8 Add log in page
-OSFP-9 Add client register page(public)
-OSFP-10  Add admin register page(private, only admin role)
+DONE OSFP-3 Create spring boot template project with all the dependencies
+DONEOSFP-4 Configure database connection and database schema
+DONE OSFP-5 Create hibernate model
+DONEOSFP-6 Create dummy index page
+DONE OSFP-7 Configure security
+DONE OSFP-8 Add log in page
+DONE OSFP-9 Add client register page(public)
+DONE OSFP-10  Add admin register page(private, only admin role)
 
 
 OSFP-11 IMPLEMENT ADD A PRODUCTS
@@ -16,12 +16,11 @@ OSFP-11 IMPLEMENT ADD A PRODUCTS
 As a user I should be able to add a new product  with the following details: id,category,type, name,country of origin, .
      If the creation process is successful the system will allocate a unique id to the new pet.
         The system will validate the following data:
-                - category to be not blank and not empty
-                - type to be not blank and not empty,
-                - name to be not blank and not empty
-                - origin to be not blank and not empty
-                -quantity to be not blank and not empty
-                -price to be not blank and not empty
+                - category
+                - name
+                - origin
+                -quantity
+                -price
     If the creation process fails the system will show an appropriate error message.
 
 
@@ -31,13 +30,17 @@ As a user I should be able to view all the existing product from the system.
             -name
             -origin
             -price
-            -type
             -category.
 
 
 OSFP-13 IMPLEMENT DELETE PRODUCTS
-
-
+As a user I should be able to delete  all the existing product from the system.
+ I should be able to delete a list where each line will contain:
+                 -id
+                 -name
+                 -origin
+                 -price
+                 -category.
 
 OSFP-14 IMPLEMENT EDIT PRODUCTS
 

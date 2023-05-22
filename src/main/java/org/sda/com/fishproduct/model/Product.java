@@ -20,18 +20,18 @@ public class Product {
     private String description;
     @Column(name = "price")
     private Double price;
-    @Column(name="country_of_origin")
+    @Column(name = "country_of_origin")
     private String countryOfOrigin;
 
     public Product() {
     }
 
-    public Product(String name, ProductCategory category, String description, Double price,String countryOfOrigin) {
+    public Product(String name, ProductCategory category, String description, Double price, String countryOfOrigin) {
         this.name = name;
         this.category = category;
         this.description = description;
         this.price = price;
-        this.countryOfOrigin= countryOfOrigin;
+        this.countryOfOrigin = countryOfOrigin;
     }
 
     public Integer getId() {
@@ -74,7 +74,9 @@ public class Product {
         this.price = price;
     }
 
-    public String getCountryOfOrigin() {return countryOfOrigin;}
+    public String getCountryOfOrigin() {
+        return countryOfOrigin;
+    }
 
     public void setCountryOfOrigin(String countryOfOrigin) {
         this.countryOfOrigin = countryOfOrigin;
