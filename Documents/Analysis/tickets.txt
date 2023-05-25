@@ -2,9 +2,9 @@ DONE OSFP-1 Create database design
      OSFP-2 Create system architecture design
 
 DONE OSFP-3 Create spring boot template project with all the dependencies
-DONEOSFP-4 Configure database connection and database schema
+DONE OSFP-4 Configure database connection and database schema
 DONE OSFP-5 Create hibernate model
-DONEOSFP-6 Create dummy index page
+DONE OSFP-6 Create dummy index page
 DONE OSFP-7 Configure security
 DONE OSFP-8 Add log in page
 DONE OSFP-9 Add client register page(public)
@@ -51,7 +51,7 @@ OSFP-15 IMPLEMENT PRODUCT BY ID
 
 
 
-OSFP-16 IMPLEMENT ADD TO CART
+DONE 
 
 
 

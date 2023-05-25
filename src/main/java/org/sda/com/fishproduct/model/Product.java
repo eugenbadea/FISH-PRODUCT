@@ -4,6 +4,8 @@ import org.sda.com.fishproduct.model.enums.ProductCategory;
 
 import jakarta.persistence.*;
 
+import java.util.Objects;
+
 @Entity
 @Table(name = "product")
 public class Product {
@@ -22,16 +24,23 @@ public class Product {
     private Double price;
     @Column(name = "country_of_origin")
     private String countryOfOrigin;
+    @Column(name = "promo_price")
+    private Double promoPrice;
+    @Column(name = "main_image_url")
+    private String mainImageUrl;
+
 
     public Product() {
     }
 
-    public Product(String name, ProductCategory category, String description, Double price, String countryOfOrigin) {
+    public Product(String name, ProductCategory category, String description, Double price, String countryOfOrigin, Double promoPrice, String mainImageUrl) {
         this.name = name;
         this.category = category;
         this.description = description;
         this.price = price;
         this.countryOfOrigin = countryOfOrigin;
+        this.promoPrice = promoPrice;
+        this.mainImageUrl = mainImageUrl;
     }
 
     public Integer getId() {
@@ -82,15 +91,32 @@ public class Product {
         this.countryOfOrigin = countryOfOrigin;
     }
 
+    public Double getPromoPrice() {
+        return promoPrice;
+    }
+
+    public void setPromoPrice(Double promoPrice) {
+        this.promoPrice = promoPrice;
+    }
+
+    public String getMainImageUrl() {
+        return mainImageUrl;
+    }
+
+    public void setMainImageUrl(String mainImageUrl) {
+        this.mainImageUrl = mainImageUrl;
+    }
+
     @Override
-    public String toString() {
-        return "Product{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", category=" + category +
-                ", description='" + description + '\'' +
-                ", price=" + price +
-                ", countryOfOrigin='" + countryOfOrigin + '\'' +
-                '}';
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Product product = (Product) o;
+        return Objects.equals(id, product.id);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
     }
 }

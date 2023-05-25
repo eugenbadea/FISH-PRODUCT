@@ -33,7 +33,7 @@ public class ClientRegistrationController {
         return "client-register";
     }
 
-    @PostMapping("client-register")
+    @PostMapping("/client-register")
     public String registerClientAccount(@ModelAttribute("user")
                                         @Valid UserRegistrationDTO userRegistrationDTO,
                                         BindingResult bindingResult

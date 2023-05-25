@@ -24,12 +24,18 @@ public class SecurityConfiguration {
                         "/css/**",
                         "/img/**",
                         "/js/**",
+                        "/images/**",
                         "/vendor/**",
                         "/webjars/**",
                         "/*/webjars/**",
-                        "/client-register/**"
+                        "/client-register/**",
+                        "/",
+                        "/index",
+                        "/home",
+                        "/shopping-cart-add/**",
+                        "/shopping-cart/**"
                 ).permitAll()
-                .requestMatchers("admin-register")
+                .requestMatchers("/admin-register","/add-product")
                 .hasAuthority("ADMIN")
                 .anyRequest()
                 .authenticated()
