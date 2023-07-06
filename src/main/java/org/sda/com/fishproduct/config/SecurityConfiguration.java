@@ -33,9 +33,10 @@ public class SecurityConfiguration {
                         "/index",
                         "/home",
                         "/shopping-cart-add/**",
+                        "/shopping-cart-remove/**",
                         "/shopping-cart/**"
                 ).permitAll()
-                .requestMatchers("/admin-register","/add-product")
+                .requestMatchers("/admin-register","/add-product","/update-product","/all-orders")
                 .hasAuthority("ADMIN")
                 .anyRequest()
                 .authenticated()

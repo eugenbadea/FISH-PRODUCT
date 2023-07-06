@@ -5,21 +5,19 @@
 <body>
 <div th:replace="fragments/header :: header"></div>
 
-
 <div class="container">
     <div class="row">
         <div class="col-md-6 col-md-offset-3">
 
             <div th:if="${param.success}">
                 <div class="alert alert-info">
-                   You've successfully created a new product!
+                    You've have successfully updated the product!
                 </div>
             </div>
 
-            <h1>Create new product</h1>
+            <h1>Update product</h1>
 
-            <form th:action="@{/add-product}" th:object="${product}" method="post">
-
+            <form th:action="@{/update-product/{id}(id=${product.id})}" th:object="${product}" method="post">
 
                 <div class="form-group"
                      th:classappend="${#fields.hasErrors('name')}? 'has-error':''">
@@ -29,18 +27,15 @@
                        th:each="error : ${#fields.errors('name')}" th:text="${error}">Validation
                         error</p>
                 </div>
-
-
                 <div class="form-group" th:classappend="${#fields.hasErrors('category')}? 'has-error':''">
                     <label for="category" class="control-label">Category</label>
-                    <select class="form-control input-lg" name="category" autofocus="true" id="category" th:field="*{category}">
-                        <option th:each="opt:${T(org.sda.com.fishproduct.model.enums.ProductCategory).values()}" th:text="${opt.name()}" th:value="${opt}">
+                    <select class="form-control input-lg" name="category" autofocus="true" id="category"
+                            th:field="*{category}">
+                        <option th:each="opt:${T(org.sda.com.fishproduct.model.enums.ProductCategory).values()}"
+                                th:text="${opt}" th:value="${opt}">
                         </option>
                     </select>
                 </div>
-
-
-
 
                 <div class="form-group"
                      th:classappend="${#fields.hasErrors('description')}? 'has-error':''">
@@ -50,7 +45,6 @@
                        th:each="error : ${#fields.errors('description')}" th:text="${error}">Validation
                         error</p>
                 </div>
-
                 <div class="form-group"
                      th:classappend="${#fields.hasErrors('price')}? 'has-error':''">
                     <label for="price" class="control-label">Price</label> <input
@@ -59,7 +53,6 @@
                        th:each="error : ${#fields.errors('price')}" th:text="${error}">Validation
                         error</p>
                 </div>
-
                 <div class="form-group"
                      th:classappend="${#fields.hasErrors('promoPrice')}? 'has-error':''">
                     <label for="promoPrice" class="control-label">Promo Price</label> <input
@@ -68,19 +61,9 @@
                        th:each="error : ${#fields.errors('promoPrice')}" th:text="${error}">Validation
                         error</p>
                 </div>
-
-                <div class="form-group"
-                     th:classappend="${#fields.hasErrors('countryOfOrigin')}? 'has-error':''">
-                    <label for="countryOfOrigin" class="control-label">Country Of Origin</label> <input
-                        id="countryOfOrigin" class="form-control" th:field="*{countryOfOrigin}"/>
-                    <p class="error-message"
-                       th:each="error : ${#fields.errors('countryOfOrigin')}" th:text="${error}">Validation
-                        error</p>
-                </div>
-
                 <div class="form-group"
                      th:classappend="${#fields.hasErrors('mainImageUrl')}? 'has-error':''">
-                    <label for="mainImageUrl" class="control-label">Main Image Url</label> <input
+                    <label for="mainImageUrl" class="control-label">Main Image URL</label> <input
                         id="mainImageUrl" class="form-control" th:field="*{mainImageUrl}"/>
                     <p class="error-message"
                        th:each="error : ${#fields.errors('mainImageUrl')}" th:text="${error}">Validation
@@ -88,23 +71,24 @@
                 </div>
 
 
-
-
                 <div class="form-group">
-                    <button type="submit" class="btn btn-success">Create</button>
-                </div>
+                    <button type="submit" class="btn btn-success">Update</button>
 
+                </div>
 
             </form>
         </div>
     </div>
 </div>
 
+
+
+
+
 <div th:replace="fragments/footer :: footer"></div>
 
 </body>
 </html>
-
 
 
 

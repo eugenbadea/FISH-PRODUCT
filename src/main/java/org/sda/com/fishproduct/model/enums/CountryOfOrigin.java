@@ -4,9 +4,15 @@ public enum CountryOfOrigin {
     THAILAND,
     VIETNAM,
 
-    CAMBODIA,
+    CHINA,
     ROMANIA,
-    PHILLIPPINES,
+    GREECE,
+
+    NORWAY,
+    USA,
+    MALDIVE,
+    UK,
+    SPAIN,
 
     CANADA
 }

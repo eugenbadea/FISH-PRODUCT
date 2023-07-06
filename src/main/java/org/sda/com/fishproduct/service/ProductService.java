@@ -8,6 +8,6 @@ import java.util.Optional;
 public interface ProductService {
     List<Product> getAll();
     void create(Product product);
-
+    void updateProduct(int id,Product product);
     Optional<Product> findById(int id);
 }

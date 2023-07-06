@@ -9,7 +9,7 @@ public interface ShoppingCartService {
     void removeProduct(Product product);
     void clearProducts();
     double totalPrice();
-    void checkOut();
+    void checkOut(String userEmail);
     Map<Product,Integer> getAllProducts();
 
 

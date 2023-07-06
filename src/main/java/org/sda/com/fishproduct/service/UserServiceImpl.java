@@ -1,7 +1,9 @@
 package org.sda.com.fishproduct.service;
 
 import org.sda.com.fishproduct.model.User;
+import org.sda.com.fishproduct.model.UserProfile;
 import org.sda.com.fishproduct.model.enums.UserRole;
+import org.sda.com.fishproduct.repository.UserProfileRepository;
 import org.sda.com.fishproduct.repository.UserRepository;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -15,11 +17,12 @@ import java.util.Optional;
 @Service
 
 public class UserServiceImpl implements UserService {
-
+private final UserProfileRepository userProfileRepository;
     private final UserRepository userRepository;
     private final BCryptPasswordEncoder passwordEncoder;
 
-    public UserServiceImpl(UserRepository userRepository, BCryptPasswordEncoder passwordEncoder) {
+    public UserServiceImpl(UserProfileRepository userProfileRepository, UserRepository userRepository, BCryptPasswordEncoder passwordEncoder) {
+        this.userProfileRepository = userProfileRepository;
         this.userRepository = userRepository;
         this.passwordEncoder = passwordEncoder;
     }
@@ -38,6 +41,13 @@ public class UserServiceImpl implements UserService {
                 role
         );
         userRepository.save(user);
+        if (role.equals(UserRole.CLIENT)) {
+            UserProfile userProfile = new UserProfile();
+            userProfileRepository.save(userProfile);
+            user.setUserProfile(userProfile);
+        }
+        userRepository.save(user);
+
     }
 
 

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity6" >
 
 <head th:replace="fragments/header :: header-css"></head>
 
@@ -19,7 +20,7 @@
                 <div class="card h-100">
                     <!-- Sale badge-->
                     <div th:if="${product.getPromoPrice()!=null}" class="badge bg-dark text-white position-absolute"
-                         style="top: 0.5rem; right: 0.5rem">Sale
+                         style="top: 0.5rem; right: 0.5rem">Promo
                     </div>
                     <!-- Product image-->
                     <img class="card-img-top" th:src="${product.getMainImageUrl()}" alt="..."/>
@@ -28,21 +29,25 @@
                         <div class="text-center">
                             <!-- Product name-->
                             <h5 class="fw-bolder" th:text="${product.getName()}"></h5>
+                           <!-- Product with promo price -->
                             <div th:if="${product.getPromoPrice()!=null}">
                                 <span class="text-muted text-decoration-line-through"
-                                      th:text="${product.getPrice() + ' lei'}"></span>
-                                <span th:text="${product.getPromoPrice()+ ' lei'}"></span>
+                                      th:text="${product.getPrice() + 'lei'}"></span>
+                                <span th:text="${product.getPromoPrice()+ 'lei'}"></span>
                             </div>
                             <!-- Product without promo price-->
                             <div th:if="${product.getPromoPrice()==null}">
-                                <span th:text="${product.getPrice()+ ' lei'}"></span>
+                                <span th:text="${product.getPrice()+ 'lei'}"></span>
                             </div>
                         </div>
                     </div>
                     <!-- Product actions-->
                     <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                         <div class="text-center"><a class="btn btn-outline-dark mt-auto"
-                                                    th:href="${'/shopping-cart-add/'+ product.getId()}">Add to cart</a>
+                                                    th:href="${'/shopping-cart-add/'+ product.getId()+'?origin=home'}">Add to cart</a>
+                        </div>
+                        <div class="text-center"  sec:authorize="hasAuthority('ADMIN')"><a class="btn btn-outline-dark mt-auto"
+                                                    th:href="${'/update-product/'+ product.getId()+'?origin=home'}">Update</a>
                         </div>
                     </div>
                 </div>
@@ -54,6 +59,7 @@
              class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
             <span>No products yet</span>
         </div>
+    </div>
 </section>
 
 
